@@ -7,6 +7,7 @@ const fetch = require('node-fetch');
 app.engine('handlebars', expbs());
 app.set('view engine', 'handlebars');
 
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.render('index', { 
@@ -18,20 +19,28 @@ app.get('/', (req, res) => {
 app.get('/people', (req, res) => {
     
     // gets the data from the Star Wars API
-   fetch('https://swapi.co/api/people')
+   fetch('https://swapi.co/api/people/')
         .then(res => res.json())
         .then(
             (json) => { 
-                console.log(json);
-                // exprsss
+                // console.log(json);
+                // express
                 res.render('people', { 
-                    people: json.results
+                    luke: json.results[0].name,
+                    heightLuke: json.results[0].height,
+                    leia: json.results[4].name,
+                    heightLeia: json.results[4].height
+
+                    
                 })
                 ///express
             }
         );
             
 });
+
+
+
 
 app.get('/planets', (req, res) => {
     

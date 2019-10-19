@@ -28,14 +28,18 @@ app.get('/people', (req, res) => {
                 res.render('people', { 
                     luke: json.results[0].name,
                     heightLuke: json.results[0].height,
-                    lukeWorld: json.results[0].homeworld.name,
+
                     leia: json.results[4].name,
                     heightLeia: json.results[4].height,
-                    leiaWorld: json.results[4].homeworld.name,
+
                     vader: json.results[3].name,
                     heightVader: json.results[3].height,
-                    vaderWorld: json.results[3].homeworld.name
+
+                    r2: json.results[2].name,
+                    heightR2: json.results[2].height,
                     
+                    c3po: json.results[1].name,
+                    heightC3po: json.results[1].height,
                 })
                 ///express
             }

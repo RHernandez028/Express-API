@@ -28,6 +28,7 @@ app.get('/people', (req, res) => {
                 res.render('people', { 
                     luke: json.results[0].name,
                     heightLuke: json.results[0].height,
+                    worldLuke: json.results[0].homeworld.name,
 
                     leia: json.results[4].name,
                     heightLeia: json.results[4].height,

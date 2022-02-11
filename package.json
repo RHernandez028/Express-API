@@ -20,7 +20,7 @@
   "homepage": "https://github.com/RHernandez028/Express-API#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^5.3.1",
     "handlebars": "^4.4.3",
     "jsesc": "^2.5.2",
     "node-fetch": "^2.6.0"
